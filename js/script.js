@@ -360,3 +360,16 @@ function chooseRandomCategory(categories) {
   var randomArrayIndex = Math.floor(Math.random() * categories.length);
   return categories[randomArrayIndex];
 }
+function getRandomCategoryShortName() {
+  // Array of possible category short_names
+  var categories = ['Lunch', 'Dinner', 'Sushi', 'Beverages', 'Desserts'];
+  
+  // Generate a random index
+  var randomIndex = Math.floor(Math.random() * categories.length);
+  
+  // Get the category at the random index
+  var randomCategory = categories[randomIndex];
+  
+  return randomCategory;
+}
+
