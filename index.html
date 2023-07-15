@@ -84,7 +84,7 @@
         <a href="#" onclick="$dc.loadMenuCategories();"><div id="menu-tile"><span>menu</span></div></a>
       </div>
       <div class="col-md-4 col-sm-6 col-xs-12">
-       <a href="#" onclick="$dc.loadMenuItems({{randomCategoryShortName()}});">
+       <a href="#" onclick="$dc.loadMenuItems(getRandomCategoryShortName());">
           <div id="specials-tile"><span>specials</span></div>
         </a>
       </div>
@@ -124,7 +124,20 @@
       <div class="text-center">&copy; Copyright David Chu's China Bistro 2016</div>
     </div>
   </footer>
+  <script>
+      function getRandomCategoryShortName() {
+        // Array of possible category short_names
+        var categories = ['Lunch', 'Dinner', 'Sushi', 'Beverages', 'Desserts'];
 
+        // Generate a random index
+        var randomIndex = Math.floor(Math.random() * categories.length);
+
+        // Get the category at the random index
+        var randomCategory = categories[randomIndex];
+
+        return randomCategory;
+      }
+    </script>
   <!-- jQuery (Bootstrap JS plugins depend on it) -->
   <script src="js/jquery-2.1.4.min.js"></script>
   <script src="js/bootstrap.min.js"></script>
